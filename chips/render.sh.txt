@@ -1,0 +1,15 @@
+#!/bin/bash
+
+SCAD_FILE="poker_chip_250.scad"
+OUTPUT_DIR="./stl"
+
+mkdir -p "$OUTPUT_DIR"
+
+for RENDER in "body" "decorations" "2ndcolor" "bottomtext" "bottomlogo"; do
+    echo "Rendering $RENDER..."
+    openscad -D "render=\"$RENDER\"" \
+             -o "$OUTPUT_DIR/poker_chip_250_qproud_rect_${RENDER}.stl" \
+             "$SCAD_FILE"
+done
+
+echo "Chip Render Finished"

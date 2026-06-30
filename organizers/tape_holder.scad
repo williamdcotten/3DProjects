@@ -55,7 +55,7 @@ difference()
     translate([-34, 15, block[2]])
         rounded_channel_cutter(24.5, r, 125);
     
-    rotate (90,90,0) translate([-27.5,32.5,block[2]+20]) 
+    rotate (90)translate([-27.5,32.5,block[2]+20]) 
         rounded_channel_cutter(60, r, 25);
 }
 
